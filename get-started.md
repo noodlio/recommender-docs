@@ -47,7 +47,8 @@ When making the HTTP calls, the API requires that you include the following head
 The parameter `X-Mashape-Key` is your unique identifier which provides you with an unique space in the recommendation engine. You can have multiple projects per key (see section `Other`).
 
 > <span class="badge badge-positive">Get your unique Mashape Key</span>
-To obtain your unique Mashape key, head over to the [**API Homepage**](https://www.google.com) and press on *Get your API keys and start hacking!* (top right corner).
+>
+> To obtain your unique Mashape key, head over to the [**API Homepage**](https://www.google.com) and press on *Get your API keys and start hacking!* (top right corner).
 
 **Routes**
 

@@ -4,9 +4,11 @@
 
 Simple Recommender is a hosted API that allows you to integrate your own recommender system without any server-side coding. The setup is very straightforward: you only need to send HTTP calls to our API to train your model and to receive recommendations. The API can be accessed using any language, thus either from your website or app (`Angular`, `React`, `Javascript`...) or your server (`NodeJS`, `Curl`, `Java`, `Python`, `Objective-C`, `Ruby`, `.NET`...).
 
+Our objective is to make it as simple as possible to implement a recommender system. In this way, you can focus on the aspects that make your project stand out, instead of writing generic repetitive code.
+
 ## Why would I use Simple Recommender?
 
-Simple Recommender replaces your server-side, saving you the time to learn a new server language, test, validate and so on. In other words, it takes away the hassle for you to setup and understand the methodology and code behind such methods. By simply following this tutorial, you get access to one of the most popular recommender systems.
+The main benefit is that the API replaces the need for you to setup and host your own server-side, saving you the time to learn a new server language, test, validate and so on. In other words, it takes away the hassle for you to setup and understand the methodology and code behind such methods. By simply following this tutorial, you get access to one of the most popular recommender systems.
 
 The key benefits include:
 

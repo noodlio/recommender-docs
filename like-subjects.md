@@ -20,7 +20,7 @@ When sending the request, include in the **body** at least the following propert
 {
   "userId": "<required>",
   "subjectId": "<required>",
-  "subjectWeight": <required>
+  "subjectWeight": <optional>
 }
 ```
 
@@ -30,7 +30,7 @@ It is up to you how you classify the users, perhaps you have already an authenti
 
 The `subjectId` should be already stored in the database (see route `add/subjects`).
 
-The `subjectWeight` should be of the format `number` (double or integer). In the example of liking or disliking a subject, you could set this value to `1` when liking the subject or `-1` when disliking it.
+The `subjectWeight` is by default set to `1` and it should be of the format `number` (double or integer). In the example of liking or disliking a subject, you could set this value to `1` when liking the subject or `-1` when disliking it. 
 
 If you wish to *delete the preference* of this user for this subject, then set the `subjectWeight` equal to `null`.
 

@@ -43,7 +43,7 @@ Something went wrong while recommending that is out of your control. Please try 
 The format of the subjects object in the body was incorrect. View the example and please make sure to include a JSON object of subjects and numerical attributes.
 
 # 801
-Missing or incorrect `userId` or `subjectId`"
+Missing or incorrect `userId` or `subjectId`
 
 # 901
 You forgot to mention the subject (`subjectId`) or the user (`userId`)

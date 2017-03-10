@@ -19,7 +19,7 @@ When making the HTTP calls, the API requires that you include the following head
 
 ```
 -H 'X-Mashape-Key: <required>' \
--H 'Content-Type: application/x-www-form-urlencoded' \
+-H 'Content-Type: application/json' \
 -H 'Accept: application/json' \
 ```
 

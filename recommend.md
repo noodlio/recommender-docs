@@ -47,18 +47,20 @@ In addition to the `userId`, you can also send additional parameters to debug yo
 ```
 {
   "userId":       "<required-string>",
-  "topNb":        <optional-number>,
   "debug":        <optional-boolean>,
   "scaleGlobal":  <optional-boolean>,
-  "newOnly":      <optional-boolean>
+  "newOnly":      <optional-boolean>,
+  "topNb":        <optional-number>,
 }
 ```
 
-`topNb` is of the type `number` (integer) and indicates how many recommendations you wish to return (e.g. `topNb=3` returns the top 3 recommended subjects). It is by default set to the number of subjects in the database.
+
 
 `debug` is of the type `Boolean` and indicates whether you would like to receive additional information about the recommendation (by default set to `false`). When set to `true`, the response returns additional properties like `userTaste` and `SubjectsData` which show the weights attached to certain attributes and thus subjects.
 
 `newOnly` is of the type `Boolean` and indicates whether the engine should also recommend subjects that the user has liked already. It is an irrelevant setting if the user has built up his profile by only liking attributes. **Important!** by default this setting is set to `false`.
+
+`topNb` is of the type `number` (integer) and indicates how many recommendations you wish to return (e.g. `topNb=3` returns the top 3 recommended subjects). It is by default set to the number of subjects in the database. **Use with caution:** if combination with `newOnly`, this setting might cause some unexpected results when iteratively training the model (fewer and fewer items are shown). We therefore recommend that you leave this field empty and handle what you display on the client side. Use this setting if the training is not repeated iteratively.
 
 `scaleGlobal` is an important setting that and of the type `Boolean` and is by default `true`. It indicates whether the scaling of the attributes should be done per subject (`false`) or for all subjects (`true`). This has important implications for your results due to the methodology behind our chosen content-based filtering technique. As a recap, we minimize the Euclidean distances between the user taste and the respective subjects to match the users preferences. When this property is set to `false`, then the scaling of the subject weights will be done per subject. It implies that the engine will look for subjects that have the closest matching attributes and their weights, irrespective of their ranking. For example, let's assume that `subjectA` assigns a weight of `10` for `attribute1` and `subjectB` assigns a weight of `5` for `attribute1`. When our user has a preference for `attribute1` of `1` (e.g. he likes this attribute instead of giving it a rating) then the engine will recommend `subjectB` since the weight of `5` is closer to `1`. Therefore, when we set `scaleGlobal` to `true`, this effect will be minimized as the distances between `10` and `5` will become smaller. We therefore recommend to set this value to `false` when you are using a selective ranking method (e.g. rating something `1...10`).
 

@@ -3,15 +3,13 @@
 
 Let's start with adding subjects to the recommender engine. As a recap, a subject is the entity that you wish to recommend to an user. For the sake of simplicity, let's assume that we want to recommend movies.
 
-*At this point we assume that you have properly setup the headers of your HTTP calls and you have obtained your unique Mashape Key. If not, please head over to the previous section.*
-
 To add subjects to our recommendation engine, we send a `HTTP POST` call to the route
 
 ```
 /add/subjects
 ```
 
-In addition to our *three headers*, we send a `JSON` object in the **body** of our request of the following form:
+In addition to our *three headers*, we send a `JSON` object in the **body** of our request in the following form:
 
 ```
 {

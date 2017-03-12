@@ -19,12 +19,18 @@ The key benefits include:
 - **Broad support**: Use your preferred client-side (for instance `Angular`, `React`, `Javascript`, etc.) or server-side (`CURL`, `Java`, `NodeJS`, `PHP`, `Python`, `Objective-C`, `Ruby` and `.NET`) language.
 - **Tested, pre-configured and maintained**: Our team is constantly monitoring, testing and updating the server to conform to the latest developments.
 
-## Content-Based Filtering Algorithm
+## Which Recommender Systems are supported?
 
-*We currently only provide support for content-based filtering. In the future, we will extend the API with collaborative filtering methods as well.*
+We currently support content-based and collaborative filtering:
 
-If you are new to these terms, content-based filtering (also called cognitive) is a technique that recommends items based on a comparison between the content of the items and a user profile. Roughly spoken, a user constructs a profile by attaching weights (*liking* or *rating*) to certain subjects (for instance *movies, videos, articles*). The subjects that are the closest to the profile of the user are then subsequently recommended to that user.
+**Content-based filtering**
 
-There are several algorithms that fall into the category of cognitive filtering. Our approach is to minimize the Euclidean distances between the user profile and the subjects.
+Content-based filtering (also referred to as *cognitive*) is a technique that recommends subjects (like e.g. *movies*, *articles*) by comparing the content with the user profile. Roughly spoken, a user constructs a profile by attaching weights (e.g. *liking* or *rating*) to certain subjects or attributes (e.g. `genre`. `release year`). The subjects that are the closest to the profile of the user are then subsequently recommended to that user.
 
-In the next section we discuss the differences between `attributes`, `user` profiles and `subjects`.
+There are several algorithms that fall into the category of cognitive filtering. Our approach is to minimize the *Euclidean distances* between the user profile and the subjects.
+
+**Collaborative filtering**
+
+Collaborative filtering (also referred to as *social*) filters information by using the recommendations of other users. It is based on the assumption that people who like certain subjects in the past are likely to agree again in the future. The best example of this concept is asking a friend (who has a similar taste like you) to recommend you a movie you have not seen yet. The recommendations of some friends who have similar interests are trusted more than recommendations from others.
+
+We apply the *neighborhood-based* technique to make predictions for an user. In addition we use *Stochastic Gradient Descent* to estimate the input matrix and use regularization to avoid overfitting. This is, as pointed out in the [Netflix prize](http://www2.research.att.com/~volinsky/papers/ieeecomputer.pdf), one of the most effective recommender methods.

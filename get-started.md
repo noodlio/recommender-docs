@@ -1,16 +1,16 @@
 
 # Getting started: how to consume the API
 
-Next is to understand how we can consume the API. Or in other words, how do we interact between our app/website/server and the recommender API?
+Let's start by understanding how to interact between your project (app, website, server) and the Recommender API.
 
-At it's basic, Simple Recommender is a hosted back-end server that is accessible through HTTP calls. You can make HTTP calls from your app or website or from your server. If you are new to HTTP, then please refer to a tutorial that explains the basics in your preferred coding language.
+In essence, an API is just a hosted back-end server that you can consume via `HTTP` calls from your workspace. If you are new to `HTTP`, then please refer to a tutorial that explains the basics in your preferred coding language.
 
 ## Endpoint
 
-The url of the endpoint of the API is:
+The endpoint url of the API is:
 
 ```
-https://simple-recommender.p.mashape.com
+https://simple-recommender.p.mashape.com/v1
 ```
 
 ## Headers
@@ -29,11 +29,11 @@ The parameter `X-Mashape-Key` is your unique identifier which provides you with 
 
 > <span class="badge badge-positive">Get your unique Mashape Key</span>
 >
-> To obtain your unique Mashape key, head over to the [**API Homepage**](https://www.google.com) and press on *Get your API keys and start hacking!* (top right corner).
+> To obtain your unique Mashape key, head over to the [**API Homepage**](https://market.mashape.com/noodlio/noodlio-pay-smooth-payments-with-stripe) and press on *Get your API keys and start hacking!* (top right corner).
 
 ## Routes
 
-For every operation (adding movies, (dis)liking a movie, (dis)liking an attribute or receiving recommendations), we send a HTTP POST request to the appropriate route:
+For every action (adding movies, (dis)liking a movie, (dis)liking an attribute or receiving recommendations), we send a `HTTP POST` request to one of the following routes:
 
 ```
 /àdd/subjects
@@ -49,5 +49,5 @@ In the next section we discuss how each route works and the requirements to make
 The subjects, attributes and user data gets stored on our server in a subfolder that is dedicated to and distinguished by your unique Mashape Key. If you do not provide a `recommenderId` (explained in later sections), then it is stored under the id `default`. You can have multiple recommendation id's per Mashape Key. Visually this is how it looks:
 
 ```
-[API]/<Mashape-Key>/<recommenderId>/data
+[Recommender-API]/<Mashape-Key>/<recommenderId>/data
 ```

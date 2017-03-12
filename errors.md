@@ -31,13 +31,19 @@ You do not have access to this recommender object. Please check whether the Mash
 You forgot to include the property `userId` in the body of the request.
 
 # 602
-The mentioned `userId` does not exist or has not liked anything yet. Make sure to add some user data (preferences) first.
+The user (`userId`) does not exist or has not liked anything yet. Make sure to add some user data (preferences) first.
 
 # 603
 No subjects in the database for current `recommenderId`. Make sure to add subjects or preferences first.
 
 # 604
 Something went wrong while recommending that is out of your control. Please try again or contact support to resolve this issue.
+
+# 605
+The user (`userId`) has not built up an user profile by (dis)liking subjects. This is required if you wish to apply Collaborative Filtering.
+
+# 606
+You need to build up least two user profiles if you wish to receive Collaborative recommendations. Alternatively set the method to `cognitive`.
 
 # 800
 The format of the subjects object in the body was incorrect. View the example and please make sure to include a JSON object of subjects and numerical attributes.

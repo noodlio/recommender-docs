@@ -1,4 +1,3 @@
-
 # Getting started: how to consume the API
 
 Let's start by understanding how to interact between your project (app, website, server) and the Recommender API.

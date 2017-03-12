@@ -10,7 +10,9 @@ Now that our recommender has received information about the subjects of interest
 
 ## Option 1: Liking or disliking subjects
 
-*Applicable for: <span class="badge">Content-based filtering</span>, <span class="badge">Collaborative filtering </span>*
+<p style="text-align: right">
+  *Applicable for: <span class="badge">Content-based filtering</span>, <span class="badge">Collaborative filtering </span>*
+</p>
 
 In this case, the user receives a list of all the available subjects and is asked to either rate (`1...10`) or like/dislike (`-1,0,1`) a subject. It is really up to your preferences and needs on how you want to structure this part.
 
@@ -42,7 +44,9 @@ If you wish to *delete the preference* of this user for this subject, then set t
 
 ## Option 2: Liking or disliking attributes
 
-*Applicable for: <span class="badge">Content-based filtering</span>*
+<p style="text-align: right">
+  *Applicable for: <span class="badge">Content-based filtering</span>*
+</p>
 
 In this case, the user builds a profile of preferences for certain attributes. He or she can like or dislike certain attributes (`-1,0,1`) or rate them based on a certain classification (e.g. `1...10`).
 

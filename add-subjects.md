@@ -9,7 +9,7 @@ To add subjects to our recommendation engine, we send a `HTTP POST` call to the 
 /add/subjects
 ```
 
-In addition to our *three headers*, we send a `JSON` object in the **body** of our request in the following form:
+In addition to our *three headers*, we send a JSON object in the **body** of our request in the following form:
 
 ```
 {

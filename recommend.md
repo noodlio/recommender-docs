@@ -10,9 +10,9 @@ Then we can send a `HTTP POST` request to the following route:
 
 We specify the `method` we like to use - collaborative or content-based filtering - in the body of our request (by default set to `cognitive`).
 
-# Content-based recommendations
+## Content-based recommendations
 
-To receive content-based recommendations, we attach a `JSON` object in the following form in the **body** of our request:
+To receive content-based recommendations, we attach a JSON object in the following form in the **body** of our request:
 
 ```
 {
@@ -25,9 +25,9 @@ The `userId` should be already present in the database and the user should have 
 
 For cognitive (or content-based) filtering we can train the data by either building up a user profile (through liking attributes) or by liking subjects.
 
-# Collaborative recommendations
+## Collaborative recommendations
 
-To receive content-based recommendations, we attach a `JSON` object in the following form in the **body** of our request:
+To receive content-based recommendations, we attach a JSON object in the following form in the **body** of our request:
 
 ```
 {
@@ -40,7 +40,7 @@ This method only works if 1) we have trained our model by (dis)liking subjects a
 
 ## Response
 
-Upon success, the corresponding request returns a `JSON` object of the following form:
+Upon success, the corresponding request returns a JSON object of the following form:
 
 ```
 {

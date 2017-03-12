@@ -1,6 +1,6 @@
 # Error codes
 
-Each request returns a `JSON` object with at least the following properties:
+Each request returns a JSON object with at least the following properties:
 
 ```
 {

@@ -6,7 +6,7 @@
 
 Before we get started we need to understand the differences between the different players in our API. We distinguish between the following:
 
-- **Subjects**: These are the objects that you wish to recommend. A `movie` or a `news item` is for instance a subject. Subjects are characterized that they have certain attributes or content that distinguish them between the various subjects.
+- **Subjects**: These are the entities that you wish to recommend to an user. A `movie` or an `article` is for instance a subject. Subjects are characterized that they have certain attributes or content that distinguish them between the various subjects.
 - **Attributes**: An attribute is a generic term for a characteristic of a subject. This can be anything and it really depends on how you define the subject. In the example where the subject is a movie, an attribute could be the *genre* , e.g. adventure, action, sci-fi. An attribute could be also a keyword that is present in the description of this movie, the actor name, the year a movie was published, etc. You name it!
 - **Users**: As the name implies, this is the person that wishes to receive recommendations of certain subjects. The user builds an user profile by liking attributes or subjects (and subsequently the attached attributes).
 

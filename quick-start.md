@@ -85,11 +85,11 @@ Finally, receive the recommendations for `user1` by sending a `HTTP POST` call t
 ```
 {
   "userId": "user1",
-  "method": "cognitive"  // or "social"
+  "method": "content"  // or "social"
 }
 ```
 
-The Recommender API currently supports both Content-Based and Collaborative Filtering. You can alter between the two methods through the parameter `method` which can take the values `cognitive` (for content-based) and `social` (for collaborative). Note that in the case case of Collaborative Filtering, the model requires that you have build up the user taste of at least two users.
+The Recommender API currently supports both Content-Based and Collaborative Filtering. You can alter between the two methods through the parameter `method` which can take the values `content` (for content-based) or `social` (for collaborative). Note that in the case of Collaborative Filtering, the model requires that you have build up the user taste of at least two users.
 
 Upon success, the corresponding request returns a JSON object of the following form:
 

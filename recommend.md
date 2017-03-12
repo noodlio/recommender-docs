@@ -17,7 +17,7 @@ To receive content-based recommendations, we attach a JSON object in the followi
 ```
 {
   "userId":   "<required>",
-  "method":   "cognitive"
+  "method":   "content"
 }
 ```
 

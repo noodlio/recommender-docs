@@ -18,15 +18,6 @@ The request was successful. Use this to determine whether your input was correct
 # 400
 Something went wrong with the synchronization to the database. This is usually an error that is caused on the server itself and is not developer related.
 
-# 500
-Something unexpected went wrong and we could not verify the `recommenderId` or your Mashape Key. Please try again later or contact support if the problem persists.
-
-# 501
-The `recommenderId` provided does not exist. Please create a new recommender id using the route `/new/id`
-
-# 502
-You do not have access to this recommender object. Please check whether the Mashape Key or `recommenderId` you provided is correct, or initiate your own recommender id using the route `/new/id`.
-
 # 601
 You forgot to include the property `userId` in the body of the request.
 
@@ -44,6 +35,15 @@ The user (`userId`) has not built up an user profile by (dis)liking subjects. Th
 
 # 606
 You need to build up least two user profiles if you wish to receive Collaborative recommendations. Alternatively set the method to `cognitive`.
+
+# 700
+Something unexpected went wrong and we could not verify the `recommenderId` or your Mashape Key. Please try again later or contact support if the problem persists.
+
+# 701
+The `recommenderId` provided does not exist. Please create a new recommender id using the route `/new/id`
+
+# 702
+You do not have access to this recommender object. Please check whether the Mashape Key or `recommenderId` you provided is correct, or initiate your own recommender id using the route `/new/id`.
 
 # 800
 The format of the subjects object in the body was incorrect. View the example and please make sure to include a JSON object of subjects and numerical attributes.

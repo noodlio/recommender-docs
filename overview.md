@@ -32,3 +32,7 @@ There are several algorithms that fall into the category of cognitive filtering.
 Collaborative filtering (also referred to as *social*) filters information by using the recommendations of other users. It is based on the assumption that people who like certain subjects in the past are likely to agree again in the future. The best example of this concept is asking a friend (who has a similar taste like you) to recommend you a movie you have not seen yet. The recommendations of some friends who have similar interests are trusted more than recommendations from others.
 
 We apply the *neighborhood-based* technique to make predictions for an user. In addition we use *Stochastic Gradient Descent* to estimate the input matrix and use regularization to avoid overfitting. This is, as pointed out in the [Netflix prize](http://www2.research.att.com/~volinsky/papers/ieeecomputer.pdf), one of the most effective recommender methods.
+
+## Hybrid
+
+The third method combines the power of both collaborative as content-based filtering. This is the default setting. In brief, the system assigns weights to certain attributes of the subject by multiplying the rating with the attribute weight, defined as the score. The subjects with the highest score are recommended first.

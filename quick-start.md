@@ -19,12 +19,18 @@ When making the HTTP calls for every subsequent route, the API requires that you
 -H 'Accept: application/json' \
 ```
 
+The endpoint of the API is:
+
+```
+https://abracadabra.p.mashape.com/v2
+```
+
 ## Step 3: Add data to our model
 
 A subject is an entity that we wish to recommend to an user, for example *movies*. Subjects have certain attributes (e.g. the genre `adventure` or release date `2017`). To add subjects to the engine, send a `HTTP POST` call to the route
 
 ```
-https://simple-recommender.p.mashape.com/v1/add/subjects
+/add/subjects
 ```
 
 In addition to our *three headers*, include a JSON object in the **body** of our request in the following form:
@@ -63,7 +69,7 @@ As you might note from this example, we assign certain weights (here `1`) to eac
 Next is to present the movies to the user and build up his profile by assigning weights to either the movies or attributes. You can retrieve a list of all the movies in the engine using the route `/get/movies`. If the user subsequently likes for example `legendsofthefall`, then we send another `HTTP POST` request to the route
 
 ```
-https://simple-recommender.p.mashape.com/v1/like/subject
+rate/subject
 ```
 
 with in the **body** the following JSON object:
@@ -76,8 +82,6 @@ with in the **body** the following JSON object:
 }
 ```
 
-*Alternatively, you can build up the user profile by liking or disliking attributes (e.g. the genre `adventure` or release year `2017`). Read in the detailed section how*.
-
 ## Step 5: Receive the recommendations
 
 Finally, receive the recommendations for `user1` by sending a `HTTP POST` call to the route `/recommend` with in the **body** the following JSON object:
@@ -85,11 +89,11 @@ Finally, receive the recommendations for `user1` by sending a `HTTP POST` call t
 ```
 {
   "userId": "user1",
-  "method": "content"  // or "social"
+  "method": "content"  // or "social", "hybrid"
 }
 ```
 
-The Recommender API currently supports both Content-Based and Collaborative Filtering. You can alter between the two methods through the parameter `method` which can take the values `content` (for content-based) or `social` (for collaborative). Note that in the case of Collaborative Filtering, the model requires that you have build up the user taste of at least two users.
+The Recommender API currently supports both Content-Based Filtering, Collaborative Filtering and a Hybrid Combination of the latter two. You can alter between the two methods through the parameter `method` which can take the values `content` (for content-based) or `social` (for collaborative) or `hybrid` (for hybrid). Note that in the case of Collaborative Filtering and the Hybrid system, the model requires that you have build up the user taste of at least two users.
 
 Upon success, the corresponding request returns a JSON object of the following form:
 
@@ -97,9 +101,15 @@ Upon success, the corresponding request returns a JSON object of the following f
 {
   "status": 200,
   "message": "Success!",
-  "recommended": [
-    "subjectId1",
-    "subjectId2",
+  "data": [
+    {
+      sid: "subjectId1",
+      score: <number>,
+    },
+    {
+      sid: "subjectId2",
+      score: <number>,
+    },
     ...
   ]
 }

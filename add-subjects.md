@@ -67,3 +67,11 @@ Here is an example with movies that we used in some of our tutorials:
   }
 }
 ```
+
+## Response
+
+As with all `HTTP POST` calls to our API, you will receive a response to indicate whether your input was correct and whether the synchronization has been successful. The response in JSON format will return an object with property `status=200` in case of a successful request. You can debug your request using the property `message`.
+
+## How to send a HTTP POST request with an object
+
+This really depends on the language that you are working with. You can view some examples on the [API homepage](https://mashape.com) or view some sample codes on [Noodl.io](https://www.noodl.io).

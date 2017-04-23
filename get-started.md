@@ -9,7 +9,7 @@ In essence, an API is just a hosted back-end server that you can consume via `HT
 The endpoint url of the API is:
 
 ```
-https://simple-recommender.p.mashape.com/v1
+https://abracadabra.p.mashape.com/v2
 ```
 
 ## Headers
@@ -36,8 +36,7 @@ For every action (adding movies, (dis)liking a movie, (dis)liking an attribute o
 
 ```
 /àdd/subjects
-/like/subject
-/like/attribute
+/rate/subject
 /recommend
 ```
 

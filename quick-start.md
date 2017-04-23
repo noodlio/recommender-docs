@@ -25,7 +25,7 @@ The endpoint of the API is:
 https://abracadabra.p.mashape.com/v2
 ```
 
-## Step 3: Add data to our model
+## Step 3: Add data to the model
 
 A subject is an entity that we wish to recommend to an user, for example *movies*. Subjects have certain attributes (e.g. the genre `adventure` or release date `2017`). To add subjects to the engine, send a `HTTP POST` call to the route
 

@@ -25,13 +25,9 @@ We currently support content-based and collaborative filtering:
 
 Content-based filtering (also referred to as *cognitive*) is a technique that recommends subjects (like e.g. *movies*, *articles*) by comparing the content with the user profile. Roughly spoken, a user constructs a profile by attaching weights (e.g. *liking* or *rating*) to certain subjects or attributes (e.g. `genre`. `release year`). The subjects that are the closest to the profile of the user are then subsequently recommended to that user.
 
-There are several algorithms that fall into the category of cognitive filtering. Our approach is to minimize the *Euclidean distances* between the user profile and the subjects.
-
 ## Collaborative filtering
 
 Collaborative filtering (also referred to as *social*) filters information by using the recommendations of other users. It is based on the assumption that people who like certain subjects in the past are likely to agree again in the future. The best example of this concept is asking a friend (who has a similar taste like you) to recommend you a movie you have not seen yet. The recommendations of some friends who have similar interests are trusted more than recommendations from others.
-
-We apply the *neighborhood-based* technique to make predictions for an user. In addition we use *Stochastic Gradient Descent* to estimate the input matrix and use regularization to avoid overfitting. This is, as pointed out in the [Netflix prize](http://www2.research.att.com/~volinsky/papers/ieeecomputer.pdf), one of the most effective recommender methods.
 
 ## Hybrid
 

@@ -5,6 +5,8 @@ For completeness, the API also offers additional supportive functions that might
 ```
 /get/subjects
 /get/users
+/get/subject
+/get/user
 /delete/subject
 /delete/user
 /delete/all

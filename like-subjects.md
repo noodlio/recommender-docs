@@ -7,7 +7,7 @@ The user receives a list of all the available subjects and is asked to either ra
 To attach weights to certain subjects, you can simply send a `HTTP POST` request to the route:
 
 ```
-/like/subject
+/rate/subject
 ```
 
 When sending the request, include the following properties in the **body**:

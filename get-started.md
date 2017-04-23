@@ -26,8 +26,6 @@ When making the HTTP calls, the API requires that you include the following head
 
 The parameter `X-Mashape-Key` is your unique identifier which provides you with an unique space in the recommendation engine. You can have multiple projects stored under one Mashape Key. This is an optional setting and is explained in the last section of this tutorial.
 
-> <span class="badge badge-positive">Get your unique Mashape Key</span>
->
 > To obtain your unique Mashape key, head over to the [**API Homepage**](https://market.mashape.com/noodlio/noodlio-pay-smooth-payments-with-stripe) and press on *Get your API keys and start hacking!* (top right corner).
 
 ## Routes

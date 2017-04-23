@@ -9,7 +9,6 @@ For completeness, the API also offers additional supportive functions that might
 /get/user
 /delete/subject
 /delete/user
-/delete/all
 ```
 
 Please refer to the [API Homepage] for a detailed description on the requirements and responses for these routes.

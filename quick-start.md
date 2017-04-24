@@ -22,7 +22,7 @@ When making the HTTP calls for every subsequent route, the API requires that you
 The endpoint of the API is:
 
 ```
-POSThttps://noodlio-abracadabra-recommender-systems-v1.p.mashape.com
+https://noodlio-abracadabra-recommender-systems-v1.p.mashape.com
 ```
 
 ## Step 3: Add data to the model

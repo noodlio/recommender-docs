@@ -81,4 +81,4 @@ You can subsequently use this list and display the subjects again to the user, t
 
 ## How to send a HTTP POST request with an object
 
-This really depends on the language that you are working with. You can view some examples on the [API homepage](https://mashape.com) or view some sample codes on [Noodl.io](https://www.noodl.io).
+This really depends on the language that you are working with. You can view some examples on the [API homepage](https://market.mashape.com/noodlio/abracadabra-recommender-systems) or view some sample codes on [Noodl.io](https://www.noodl.io).

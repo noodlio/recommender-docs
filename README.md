@@ -4,4 +4,4 @@ Simple Recommender is a hosted API that allows you to integrate your own recomme
 
 Our objective is to make it as simple as possible to implement a recommender system. In this way, you can focus on the aspects that make your project stand out, instead of writing generic repetitive code.
 
-Please refer to [overview.md](overview.md) for the complete documentation.
+Please refer to [https://www.abracadabra-recommender.com/docs/](the official docs) for a full overview.

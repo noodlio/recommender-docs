@@ -15,6 +15,9 @@ Here `status` is of the type `number`. The codes are explained in the remainder 
 # 200
 The request was successful. Use this to determine whether your input was correct.
 
+# 300
+This typically occurs when there was a mismatch between the user input and the data stored in the database. Please check your input and whether you have for instance trained the model. Another occurence could be that there are not enough user profiles while requesting social recommendations.
+
 # 400
 Something went wrong with the synchronization to the database. This is usually an error that is caused on the server itself and is not developer related.
 

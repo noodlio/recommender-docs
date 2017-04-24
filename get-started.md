@@ -9,7 +9,7 @@ In essence, an API is just a hosted back-end server that you can consume via `HT
 The endpoint url of the API is:
 
 ```
-https://abracadabra.p.mashape.com/v2
+https://noodlio-abracadabra-recommender-systems-v1.p.mashape.com
 ```
 
 ## Headers
@@ -26,7 +26,7 @@ When making the HTTP calls, the API requires that you include the following head
 
 The parameter `X-Mashape-Key` is your unique identifier which provides you with an unique space in the recommendation engine. You can have multiple projects stored under one Mashape Key. This is an optional setting and is explained in the last section of this tutorial.
 
-> To obtain your unique Mashape key, head over to the [**API Homepage**](https://market.mashape.com/noodlio/noodlio-pay-smooth-payments-with-stripe) and press on *Get your API keys and start hacking!* (top right corner).
+> To obtain your unique Mashape key, head over to the [**API Homepage**](https://market.mashape.com/noodlio/abracadabra-recommender-systems) and press on *Get your API keys and start hacking!* (top right corner).
 
 ## Routes
 

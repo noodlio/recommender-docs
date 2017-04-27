@@ -2,7 +2,9 @@
 
 This section is for developers that want to get straight to business. We assume that at this point you understand how `HTTP POST` requests work in the coding language that you are working with.
 
-In essence, the Recommender API is a hosted back-end server that you can consume via `HTTP` calls from your workspace. By simply sending a couple of requests to our endpoint, we will have our first recommendations flowing into our project.
+Recommender algorithms as a service - the Recommender API is an easy solution to a complex problem. We are solving the struggle of setting up your own recommender engine, going through the hassle of learning a new language (Graph Databases, Neo4j, etc.) and researching and integrating several recommender system.
+
+The setup is very straightforward: you only need to send HTTP calls to our API to train your model and to receive recommendations. The API can be accessed using any language, thus either from your website or app (`Angular`, `React`, `Javascript`...) or your server (`NodeJS`, `Curl`, `Java`, `Python`, `Objective-C`, `Ruby`, `.NET`...). 
 
 ## Step 1: Get your Mashape Key
 
@@ -62,11 +64,11 @@ In addition to our *three headers*, include a JSON object in the **body** of our
 }
 ```
 
-As you might note from this example, we assign certain weights (here `1`) to each attribute. While you are entitled to add as many attributes as you wish, we do recommend that you keep it limited to keep the calculation time at a reasonable level.
+As you might note from this example, we assign certain weights (here `1`) to each attribute. It is up to you how to design this experiment.
 
 ## Step 4: Train the model by building up the user taste
 
-Next is to present the movies to the user and build up his profile by assigning weights to either the movies or attributes. You can retrieve a list of all the movies in the engine using the route `/get/movies`. If the user subsequently likes for example `legendsofthefall`, then we send another `HTTP POST` request to the route
+Next is to present the movies to the user and build up his profile by assigning weights to the subjects (here: movies). You can retrieve a list of all the subjects that you have stored in the engine using the route `/get/subjects`. If the user subsequently likes for example `legendsofthefall`, then send another `HTTP POST` request to the route:
 
 ```
 rate/subject
@@ -82,6 +84,8 @@ with in the **body** the following JSON object:
 }
 ```
 
+You are in charge of the ids (e.g. if you are using Firebase, use `User.uid`) and how you define your ratings (here: `subjectWeight`). You need to make sure that the `subjectId` is present in the database (see previous step).
+
 ## Step 5: Receive the recommendations
 
 Finally, receive the recommendations for `user1` by sending a `HTTP POST` call to the route `/recommend` with in the **body** the following JSON object:
@@ -93,7 +97,7 @@ Finally, receive the recommendations for `user1` by sending a `HTTP POST` call t
 }
 ```
 
-The Recommender API currently supports both Content-Based Filtering, Collaborative Filtering and a Hybrid Combination of the latter two. You can alter between the two methods through the parameter `method` which can take the values `content` (for content-based) or `social` (for collaborative) or `hybrid` (for hybrid). Note that in the case of Collaborative Filtering and the Hybrid system, the model requires that you have build up the user taste of at least two users.
+The Recommender API currently supports Content-Based, Collaborative Filtering and Hybrid Filtering. You can alter between the two methods through the parameter `method` which can take the values `content` (for content-based) or `social` (for collaborative) or `hybrid` (for hybrid). Note that in the case of Collaborative Filtering and the Hybrid systems, the model requires that you have build up the user taste of at least two users.
 
 Upon success, the corresponding request returns a JSON object of the following form:
 
@@ -115,7 +119,7 @@ Upon success, the corresponding request returns a JSON object of the following f
 }
 ```
 
-The list of the recommended subjects is stored and sorted in the property `recommended` and is of the type `array`. Thus `array[0]` is the best recommended subject for user `user1` using the data so far.
+The list of the recommended subjects is stored and sorted in the property `recommended` and is of the type array. Thus `array[0]` is the best recommended subject for user `user1` using the data so far.
 
 ## Next up
 

@@ -8,7 +8,7 @@ The setup is very straightforward: you only need to send HTTP calls to our API t
 
 ## Step 1: Get your Mashape Key
 
-First, we need to register on Mashape and obtain our unique Mashape Key. To do so, head over the [**API Homepage**](https://market.mashape.com/noodlio/noodlio-pay-smooth-payments-with-stripe) and press on
+First, we need to register on Mashape and obtain our unique Mashape Key. To do so, head over the [**API Homepage**](https://market.mashape.com/noodlio/abracadabra-recommender-systems) and press on
 *Get your API keys and start hacking!* (top right corner). When reloading the API page, you can find the key under the property `X-Mashape-Key` in the request example.
 
 ## Step 2: Set up the headers for the `HTTP` calls

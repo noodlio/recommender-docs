@@ -1,6 +1,6 @@
 # What is the Abracadabra Recommender API?
 
-Recommender algorithms as a service - the Recommender API is an easy solution to a complex problem. We are solving the struggle of setting up your own recommender engine, going through the hassle of learning a new language (Graph Databases, Neo4j, etc.) and researching and integrating several recommender system.
+Recommender algorithms as a service - the Recommender API is an easy solution to a complex problem. We are solving the struggle of setting up your own recommender engine, going through the hassle of learning a new language (Graph Databases, Neo4j, etc.) and researching and integrating several recommender systems.
 
 The setup is very straightforward: you only need to send HTTP calls to our API to train your model and to receive recommendations. The API can be accessed using any language, thus either from your website or app (`Angular`, `React`, `Javascript`...) or your server (`NodeJS`, `Curl`, `Java`, `Python`, `Objective-C`, `Ruby`, `.NET`...). 
 
